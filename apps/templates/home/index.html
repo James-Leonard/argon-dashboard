@@ -29,13 +29,14 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Total Amount</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">Deposit Amount</h5>
                       <span class="h2 font-weight-bold mb-0">0</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                        <i class="ni ni-active-40"></i>
+                      <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                        <i class="ni ni-chart-bar-32"></i>
                       </div>
+                     
                     </div>
                   </div>
                 </div>
@@ -47,7 +48,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">New bet</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">Withdrawal amount</h5>
                       <span class="h2 font-weight-bold mb-0">0</span>
                     </div>
                     <div class="col-auto">
@@ -87,8 +88,8 @@
                       <span class="h2 font-weight-bold mb-0">0%</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
-                        <i class="ni ni-chart-bar-32"></i>
+                      <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                        <i class="ni ni-active-40"></i>
                       </div>
                     </div>
                   </div>
@@ -107,7 +108,7 @@
     <!-- Page content -->
     <div class="container-fluid mt--6">
       <div class="row">
-        <div class="col-xl-8">
+        <div class="col-xl-12">
           <div class="card bg-default">
             <div class="card-header bg-transparent">
               <div class="row align-items-center">
@@ -138,24 +139,6 @@
               <div class="chart">
                 <!-- Chart wrapper -->
                 <canvas id="chart-sales-dark" class="chart-canvas"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4">
-          <div class="card">
-            <div class="card-header bg-transparent">
-              <div class="row align-items-center">
-                <div class="col">
-                  <h6 class="text-uppercase text-muted ls-1 mb-1">Performance</h6>
-                  <h5 class="h3 mb-0">Coin orders</h5>
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <!-- Chart -->
-              <div class="chart">
-                <canvas id="chart-bars" class="chart-canvas"></canvas>
               </div>
             </div>
           </div>
@@ -196,8 +179,8 @@
                     </td>
                     <td>
                       <span class="badge badge-dot mr-4">
-                        <i class="bg-warning"></i>
-                        <span class="status">inactive</span>
+                        <i class="bg-success"></i>
+                        <span class="status">active</span>
                       </span>
                     </td>
                     <td>
@@ -297,6 +280,32 @@
                     </th>
                     <td class="budget">
                       &#8358;500000
+                    </td>
+                    <td>
+                      <span class="badge badge-dot mr-4">
+                        <i class="bg-warning"></i>
+                        <span class="status">inactive</span>
+                      </span>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <button type="submit" class="btn btn-primary my-4">Submit</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="media align-items-center">
+                        <a href="#" class="avatar rounded-circle mr-3">
+                          <img alt="Image placeholder" src="/static/assets/img/theme/sketch.jpg">
+                        </a>
+                        <div class="media-body">
+                          <span class="name mb-0 text-sm">Claim 10&#37;</span>
+                        </div>
+                      </div>
+                    </th>
+                    <td class="budget">
+                      &#8358;1000000
                     </td>
                     <td>
                       <span class="badge badge-dot mr-4">
