@@ -1,9 +1,9 @@
-<nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+<nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-default shadow" id="sidenav-main">
   <div class="scrollbar-inner">
     <!-- Brand -->
     <div class="sidenav-header  align-items-center">
       <a class="navbar-brand" href="/">
-        <h1 class="text-dark">Saudefund</h1>
+        <h1 class="text-white">Saudefund</h1>
       </a>
     </div>
     <div class="navbar-inner">
@@ -13,44 +13,44 @@
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link {% if 'index' in segment %} active {% endif %}" href="/">
-              <i class="ni ni-tv-2 text-primary"></i>
-              <span class="nav-link-text">Dashboard</span>
+              <i class="ni ni-tv-2 text-red"></i>
+              <span class="nav-link-text text-white">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="ni ni-key-25 text-info"></i>
-              <span class="nav-link-text">Investment</span>
+            <a class="nav-link" href="invest.html">
+              <i class="ni ni-chart-bar-32 text-red"></i>
+              <span class="nav-link-text text-white">Investment</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="ni ni-key-25 text-info"></i>
-              <span class="nav-link-text">Deposit</span>
+            <a class="nav-link" href="/deposit.html">
+              <i class="ni ni-credit-card text-red"></i>
+              <span class="nav-link-text text-white">Deposit</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="ni ni-key-25 text-info"></i>
-              <span class="nav-link-text">Withdrawal</span>
+            <a class="nav-link" href="/withdrawal.html">
+              <i class="ni ni-spaceship text-red"></i>
+              <span class="nav-link-text text-white">Withdrawal</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link {% if 'profile' in segment %} active {% endif %}" href="/profile.html">
-              <i class="ni ni-single-02 text-yellow"></i>
-              <span class="nav-link-text">Profile</span>
+              <i class="ni ni-single-02 text-danger"></i>
+              <span class="nav-link-text text-white">Profile</span>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="{% url 'logout' %}">
               <i class="ni ni-user-run text-red"></i>
-              <span class="nav-link-text">Logout</span>
+              <span class="nav-link-text text-white">Logout</span>
             </a>
           </li>            
         </ul>
         <!-- Divider -->
-        <hr class="my-3">
+        <hr class="my-3 bg-white">
       </div>
     </div>
   </div>
