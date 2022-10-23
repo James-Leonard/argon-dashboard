@@ -5,10 +5,14 @@ Copyright (c) 2019 - present AppSeed.us
 
 # Create your views here.
 from django.shortcuts import render, redirect
+
+from django.contrib.auth.models import Group
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm, SignUpForm
+from .decorators import unauthenticated_user
 
 
+@unauthenticated_user
 def login_view(request):
     form = LoginForm(request.POST or None)
 
@@ -31,6 +35,7 @@ def login_view(request):
     return render(request, "accounts/login.html", {"form": form, "msg": msg})
 
 
+@unauthenticated_user
 def register_user(request):
     msg = None
     success = False
@@ -38,15 +43,19 @@ def register_user(request):
     if request.method == "POST":
         form = SignUpForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
             username = form.cleaned_data.get("username")
             raw_password = form.cleaned_data.get("password1")
+
+            group = Group.objects.get(name="customer")
+            user.groups.add(group)
+
             user = authenticate(username=username, password=raw_password)
 
             msg = 'User created - please <a href="/login">login</a>.'
             success = True
 
-            # return redirect("/login/")
+            return redirect("/login/")
 
         else:
             msg = 'Form is not valid'
